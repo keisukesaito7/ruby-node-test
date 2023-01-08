@@ -1,0 +1,10 @@
+version: '3.7'
+services:
+  serverless:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - .:/var/repo
+    command: tail -f /dev/null
+    working_dir: /var/repo
