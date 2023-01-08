@@ -25,14 +25,25 @@ functions:
   hello:
     handler: handler.hello
     description: Simple Hello, World
+    # package:
+    #   include:
+    #     - handler.rb
   httparty:
     handler: libs/httparty.hello
     description: Use Gem
+    # package:
+    #   include:
+    #     - libs/httparty.rb
 
 package:
   exclude:
+    - .bundle
     - .env
+    - .ruby-version
     - .git
     - .gitignore
     - Dockerfile
+    - Gemfile
+    - Gemfile.lock
     - docker-compose.yml
+  
