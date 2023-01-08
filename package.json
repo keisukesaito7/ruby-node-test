@@ -10,6 +10,7 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "serverless-prune-plugin": "^2.0.1"
+    "serverless-prune-plugin": "^2.0.1",
+    "serverless-ruby-layer": "^1.6.0"
   }
 }
