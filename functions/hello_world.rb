@@ -1,6 +1,6 @@
 require 'json'
 
-def hello(event:, context:)
+def handler(event:, context:)
   {
     statusCode: 200,
     body: {

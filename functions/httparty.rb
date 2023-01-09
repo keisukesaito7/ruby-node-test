@@ -1,6 +1,6 @@
 require 'httparty'
 
-def hello(event:, context:)
+def handler(event:, context:)
   body = HTTParty.get("https://github.com").body
 
   { statusCode: 200, body: body }
