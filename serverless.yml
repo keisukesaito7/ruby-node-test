@@ -12,6 +12,11 @@ plugins:
   - serverless-prune-plugin
   - serverless-ruby-layer
 
+package:
+  individually: true
+  patterns:
+    - '!./**'
+
 custom:
   prune:
     automatic: true
@@ -23,18 +28,14 @@ custom:
 
 functions:
   hello:
-    handler: handler.hello
+    handler: functions/hello_world.handler
     description: Simple Hello, World
+    package:
+      patterns:
+        - "functions/hello_world.rb"
   httparty:
-    handler: libs/httparty.hello
-    description: Use Gem
-
-package:
-  patterns:
-    - "!.bundle/**"
-    - "!.env"
-    - "!.ruby-version"
-    - "!Dockerfile"
-    - "!Gemfile"
-    - "!Gemfile.lock"
-    - "!docker-compose.yml"
+    handler: functions/httparty.handler
+    description: change description (using gem)
+    package:
+      patterns:
+        - "functions/httparty.rb"
