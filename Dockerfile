@@ -1,4 +1,4 @@
-FROM ruby:2.7-slim
+FROM ruby:2.7.7
 
 # apt-get remove -y curl はいらないかも
 RUN apt-get update -qq \
@@ -12,7 +12,14 @@ RUN apt-get update -qq \
 
 WORKDIR /var/repo
 COPY ./package.json /var/repo
+COPY ./package-lock.json /var/repo
 
 RUN npm install
 RUN npm install -g serverless
+
+COPY ./Gemfile /var/repo
+COPY ./Gemfile.lock /var/repo
+
+RUN bundle install
+
 
