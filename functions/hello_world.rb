@@ -1,6 +1,8 @@
+# frozen_string_literal: true
+
 require 'json'
 
-def handler(event:, context:)
+def handler(event:, context:) # rubocop:disable Lint/UnusedMethodArgument
   {
     statusCode: 200,
     body: {
