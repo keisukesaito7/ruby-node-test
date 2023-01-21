@@ -2,6 +2,12 @@
 
 ### 準備
 
+名前変更
+
+```yaml:serverless.yml
+service: 好きな名前に
+```
+
 `.env` ファイル追加
 
 ```

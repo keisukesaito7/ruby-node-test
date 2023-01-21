@@ -14,9 +14,9 @@ plugins:
   - serverless-ruby-layer
 
 package:
-  individually: true
   patterns:
     - '!./**'
+    - 'functions/**'
 
 custom:
   prune:
@@ -31,12 +31,6 @@ functions:
   hello:
     handler: functions/hello_world.handler
     description: Simple Hello, World
-    package:
-      patterns:
-        - "functions/hello_world.rb"
   httparty:
     handler: functions/httparty.handler
     description: change description (using gem)
-    package:
-      patterns:
-        - "functions/httparty.rb"

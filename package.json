@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "package_dev": "sls package --stage dev",
+    "deploy_dev": "sls deploy --stage dev"
   },
   "keywords": [],
   "author": "",
